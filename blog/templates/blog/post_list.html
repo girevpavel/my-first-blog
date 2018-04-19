@@ -1,4 +1,7 @@
-<html>
-    <p>Hi there!</p>
-    <p>It works!</p>
-</html>
+{% for post in posts %}
+<div>  
+	<p> дата публикации: {{ post.published_date }} </p>
+	<h1><a href="">{{ post.title }}</a></h1>
+	<p>{{ post.text|linebreaksbr }} </p>
+</div>
+{% endfor %}
